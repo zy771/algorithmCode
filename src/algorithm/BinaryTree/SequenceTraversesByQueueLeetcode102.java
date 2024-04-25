@@ -15,7 +15,9 @@ public class SequenceTraversesByQueueLeetcode102 {
     // TreeNode 类定义
     static class TreeNode {
         int val;
-        TreeNode left;zzz
+        TreeNode left;
+        //TreeNode left; 定义了 TreeNode 类的一个属性，这个属性也是一个 TreeNode 类型的对象。
+        // 这意味着每个 TreeNode 对象可以拥有一个指向另一个 TreeNode 对象的引用作为其左子节点。
         TreeNode right;
 
         TreeNode(int x) { val = x; }//构造方法，同时满足两个条件，1：无任何返回值，连void也没有.2：和类同名。
