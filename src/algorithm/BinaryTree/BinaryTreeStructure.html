@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>二叉树</title>
+</head>
+<body>
+public class TreeNode {                                     定义了一个公共类 TreeNode。
+int val;                                                    在类中定义了一个整型变量 val，用于存储树节点的值。
+TreeNode left;                                              定义了一个类型为 TreeNode 的变量 left，用于指向当前节点的左子节点
+TreeNode right;                                             定义了一个类型为 TreeNode 的变量 right，用于指向当前节点的右子节点。
+
+TreeNode() {}                                               定义了一个无参构造函数，用于创建一个没有数据的树节点。
+TreeNode(int val) { this.val = val; }                       定义了一个有参构造函数，接受一个整数 val 作为参数，用这个参数来初始化节点的值。
+TreeNode(int val, TreeNode left, TreeNode right) {          定义了一个接受三个参数的构造函数，用于同时设置节点的值、左子节点和右子节点。
+this.val = val;                                             使用传入的 val 参数设置 TreeNode 对象的 val 属性。
+this.left = left;                                           使用传入的 left 参数设置 TreeNode 对象的 left 属性，指向左子节点。
+this.right = right;                                         使用传入的 right 参数设置 TreeNode 对象的 right 属性，指向右子节点。
+}
+}
+
+</body>
+</html>
