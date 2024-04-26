@@ -1,5 +1,4 @@
 package src.algorithm.BinaryTree;
-
 /**
  * @Author：zz
  * @Package：src.algorithm.BinaryTree
@@ -34,7 +33,7 @@ public class SequenceTraversalOutputInReverseOrderLeetcode107 {
     }
 
     // 构建二叉树
-    public static TreeNode buildTree(String[] parts) {
+     static TreeNode buildTree(String[] parts) {
         if (parts[0].equals("null")) {
             return null;
         }
@@ -43,14 +42,18 @@ public class SequenceTraversalOutputInReverseOrderLeetcode107 {
         Queue<TreeNode> queue = new LinkedList<>();
         queue.offer(root);
         int i = 1;
-        while (!queue.isEmpty() && i < parts.length) {
+        while (!queue.isEmpty()) {
             TreeNode node = queue.poll();
+
+            if (i >= parts.length) break;
             if (!parts[i].equals("null")) {
                 node.left = new TreeNode(Integer.parseInt(parts[i]));
                 queue.offer(node.left);
             }
             i++;
-            if (i < parts.length && !parts[i].equals("null")) {
+
+            if (i >= parts.length) break;
+            if (!parts[i].equals("null")) {
                 node.right = new TreeNode(Integer.parseInt(parts[i]));
                 queue.offer(node.right);
             }
@@ -60,7 +63,7 @@ public class SequenceTraversalOutputInReverseOrderLeetcode107 {
     }
 
     // 层序遍历并翻转结果
-    public static List<List<Integer>> levelOrderBottom(TreeNode root) {
+    static List<List<Integer>> levelOrderBottom(TreeNode root) {
         List<List<Integer>> list = new ArrayList<>();
         if (root == null) {
             return list;
